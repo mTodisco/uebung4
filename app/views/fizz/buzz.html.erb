@@ -1,30 +1,31 @@
-<h1>Web FizzBuzz Spiel</h1>
-<p>Ausgabe aller Zahlen von 1 – 100 und Ausgabe der Teilbarkeit durch 3 und 5.</p>
-
+<h1>Fizz # Buzz</h1>
+<p>Ausgabe der Variablen: </p>
 <p> Fizz-Name: <%= @fizz_name %><br>
 Buzz-Name: <%= @buzz_name%><br>
 Fizz Nummer: <%= @fizz_number%><br>
 Buzz Nummer: <%= @buzz_number %><br>
 Max Nummer: <%= @max_number%></p>
 
+
 <table border="1">
-	
+  
 <tr align="center">
-  	<td>Zahl: <%= @max_number %></td>
-	<td>Teilbar durch <%= @fizz_number%></td>
-	<td>Teilbar durch <%= @buzz_number%></td>
-	<td>Fizzbuzz</td>
+    <td>Zahl: <%= @max_number %></td>
+  <td>Teilbar durch <%= @fizz_number%></td>
+  <td>Teilbar durch <%= @buzz_number%></td>
+  <td>Fizzbuzz</td>
 </tr>
 
 <% 1.upto(@max_number) do |x| %>
-<tr> 
+<tr <%= color_chooser(x) %> align="center">
+
   <td> <%= x %></td>
- 
+  
   <td> <%= x%@fizz_number == 0 ? "x" : "" %> </td>
   
   <td> <%= x%@buzz_number == 0 ? "x" : "" %> </td>
   
-  <td>  </td>
+  <td> <%= fizzy(x) %> </td>
 
 </tr>
 <% end %>
