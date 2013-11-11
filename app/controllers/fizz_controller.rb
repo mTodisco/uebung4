@@ -1,9 +1,9 @@
 class FizzController < ApplicationController
 	def initialize
-	@fizz_name="Fizz"
-  @buzz_name="Buzz"
-  @fizz_number=3
-  @buzz_number=5
+	@fizz_name="Izzy"
+  @buzz_name="Bizzy"
+  @fizz_number=2
+  @buzz_number=4
   @max_number=100
 	end
 
